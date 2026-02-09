@@ -1,0 +1,15 @@
+name: 'CalVer Tag @anthonygrimes'
+description: 'An opinionated git tagging action using calendar versioning in the YYYY.MM.MICRO format'
+author: 'anthonygrimes'
+
+branding:
+  icon: 'tag'
+  color: 'green'
+
+outputs:
+  version:
+    description: 'The tagged version created as part of this action'
+
+runs:
+  using: 'node24'
+  main: 'dist/index.js'
