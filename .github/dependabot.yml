@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    cooldown:
+      default-days: 7
+      semver-major-days: 7
+      semver-minor-days: 3
+      semver-patch-days: 1
+    pull-request-branch-name:
+      template: "{prefix}/{dependency}-{version}"
+      prefix: "deps"
+      separator: "-"
+      word-separator: "-"
+      branch-name-case: "lowercase"
+    commit-message:
+      prefix: "chore(deps)"
